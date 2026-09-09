@@ -912,6 +912,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         // Make sure that terminal styling is always applied.
         Intent stylingIntent = new Intent(TERMUX_ACTIVITY.ACTION_RELOAD_STYLE);
         stylingIntent.putExtra(TERMUX_ACTIVITY.EXTRA_RECREATE_ACTIVITY, recreateActivity);
+        stylingIntent.setPackage(context.getPackageName());
         context.sendBroadcast(stylingIntent);
     }
 
